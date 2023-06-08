@@ -1,0 +1,32 @@
+.game-Board{
+    margin:    25px;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr); 
+    padding: 25px;
+    
+    
+}
+.game-cell{
+    box-shadow: rgba(0, 8, 15, 0.2) 0px 8px 24px; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 100px;
+    background-color: aliceblue;
+}
+.winner{
+    color: rgb(255, 1, 136);
+    padding: 25px;
+    font-size: 30px;
+}
+.game-cell.is-x{
+    color: blue;
+}
+.game-cell.is-o{
+    color: red;
+}

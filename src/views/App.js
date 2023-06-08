@@ -1,25 +1,16 @@
 import logo from "./logo.svg";
 import "./App.scss";
-import MyComponent from "./Example/MyComponent";
-
+// import MyComponent from "./Example/MyComponent";
+// import ListTodo from "./Todos/ListTodo";
+import Game from "./Games/Game";
 function App() {
   // const App = () =>{
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent />
-        <p>Hello world</p>
-        <a
-          className="App-link"
-          href="https://www.facebook.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        {/* <MyComponent></MyComponent> */}
+        <p className="Name">TIC-TAC-TOE</p>
+        <Game />
       </header>
     </div>
   );
