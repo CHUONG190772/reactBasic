@@ -1,13 +1,15 @@
 .game-Board{
-    margin:    25px;
     width: 500px;
     height: 500px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3,1fr); 
-    padding: 25px;
-    
-    
+    padding: 0mm;
+    margin-top: auto;
+    margin-bottom: 2cm;
+    text-align: center;
+    float: left;
+    margin-left: 1cm;
 }
 .game-cell{
     box-shadow: rgba(0, 8, 15, 0.2) 0px 8px 24px; 
@@ -17,7 +19,7 @@
     align-items: center;
     font-weight: bold;
     font-size: 100px;
-    background-color: aliceblue;
+    background-color: rgb(157, 201, 240);
 }
 .winner{
     color: rgb(255, 1, 136);
@@ -29,4 +31,20 @@
 }
 .game-cell.is-o{
     color: red;
+}
+.button{
+    font-size: 30px;
+    border: solid 2px chartreuse;
+    color:  whitesmoke;
+    background-color: rgb(6, 12, 12);
+}
+.button:hover{
+    color: red;
+    background-color: aliceblue;
+}
+.Backto{
+    text-align: center;
+}
+.backto{
+    background-color: greenyellow;
 }
