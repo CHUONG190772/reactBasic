@@ -37,13 +37,21 @@ const Game = () => {
       </div>
     );
   });
+  let status;
+  if (win) {
+    status = `Winner is ${xIsNext ? "O" : "X"}`;
+    alert(`Winner is ${xIsNext ? "O" : "X"}`);
+  } else if (moveHistory.length === 9) {
+    status = "Draw";
+    alert("Draw");
+  } else {
+    status = `Next player: ${xIsNext ? "X" : "O"}`;
+  }
   return (
     <>
       <div>
         <Board cells={board} onClick={handleClick} />
-        <div className="winner">
-          {win ? `Winner is ${xIsNext ? "O" : "X"}` : "  "}
-        </div>
+        <div className="winner">{status}</div>
         <button className="button" onClick={handleReset}>
           Game Start
         </button>
