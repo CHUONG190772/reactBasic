@@ -1,6 +1,6 @@
 import React from "react";
 import Cell from "./Cell";
-import { checkwinner } from "../Checkgame";
+//import { checkwinner } from "../Checkgame";
 
 const Board = (props) => {
   // const show = () => {
