@@ -22,14 +22,14 @@ function App() {
       TenSV: "Tran Thi B",
       NgaySinh: "02/02/2000",
       GioiTinh: "Nữ",
-      MaKhoa: "K002",
+      MaKhoa: "K003",
     },
     {
       MaSV: "SV003",
       TenSV: "Le Van C",
       NgaySinh: "11/01/2000",
       GioiTinh: "Nam",
-      MaKhoa: "K001",
+      MaKhoa: "K004",
     },
     {
       MaSV: "SV004",
