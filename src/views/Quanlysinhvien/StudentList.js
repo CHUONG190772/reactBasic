@@ -4,8 +4,7 @@ const StudentList = ({
   students,
   editStudent,
   deleteStudent,
-  handleSearchInputChange,
-  searchKeyword,
+  setSearchKeyword,
 }) => {
   const handleEdit = (student) => {
     // Gọi hàm chỉnh sửa sinh viên từ component cha (App.js)
@@ -16,18 +15,13 @@ const StudentList = ({
     // Gọi hàm xóa sinh viên từ component cha (App.js)
     deleteStudent(student);
   };
+  const handleSearchInputChange = (event) => {
+    setSearchKeyword(student);
+  };
+  const searchResults = searchStuents();
 
   return (
     <>
-      <div>
-        <input
-          type="text"
-          placeholder="Tìm kiếm sinh viên..."
-          value={searchKeyword}
-          onChange={handleSearchInputChange}
-        />
-        <button onClick={searchKeyword}>Tìm kiếm</button>
-      </div>
       <table>
         <thead>
           <tr>
