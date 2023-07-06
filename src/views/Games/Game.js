@@ -8,6 +8,7 @@ const Game = () => {
   const [xIsNext, setXIsNext] = useState(true);
   const [moveHistory, setMoveHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
+  const boardSize = 3;
 
   const win = checkwinner(board);
 
@@ -36,13 +37,23 @@ const Game = () => {
     setCurrentMove(move);
     setBoard(moveHistory[move]);
     setXIsNext(move % 2 === 0);
+    const row = Math.floor(move / boardSize) + 1;
+    const colum = (move % boardSize) + 1;
+    console.log(`Row: ${row}, Colum: ${colum}`);
   };
 
   const moves = moveHistory.map((_, move) => {
     const description = `Go to move #${move + 1}`;
+    const row = Math.floor(move / boardSize) + 1;
+    const colum = (move % boardSize) + 1;
     return (
       <div key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button onClick={() => jumpTo(move)}>
+          {description}
+          <span>
+            (Row: {row}, Column:{colum})
+          </span>
+        </button>
       </div>
     );
   });
@@ -68,6 +79,9 @@ const Game = () => {
         </button>
         <div className="game-info">
           <div>{moves}</div>
+          <div>
+            <p>Move: {currentMove + 1}</p>
+          </div>
         </div>
       </div>
     </>
